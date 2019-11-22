@@ -126,6 +126,10 @@
           color: $detail-color;
           font-weight: bolder;
         }
+
+        a:active {
+          color: white;
+        }
       }
 
       .navlink-line {
