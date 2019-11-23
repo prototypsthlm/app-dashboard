@@ -69,7 +69,7 @@ class AllPhilipsLights extends React.Component<IProps, {}> {
             <button className="philipsLight-button">all lights</button>
           </Link>
           <hr className="philipsLight-heading-line" />
-          <h2 className="philipsLight-heading">SWITCH LIGHTS</h2>
+          <h2 className="philipsLight-heading">SWITCH THE LIGHTS</h2>
         </div>
       </div>
     )

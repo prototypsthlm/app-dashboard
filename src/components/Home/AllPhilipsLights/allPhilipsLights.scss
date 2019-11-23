@@ -1,4 +1,5 @@
 @import '../../../Styles/variables.scss';
+@import '../../../Styles/responsiveness.scss';
 
 .philipsLight-container {
   display: -webkit-box;
@@ -34,19 +35,52 @@
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 0.5em;
 
       .onoff-text {
         font-family: $body-font;
         margin-top: 1em;
         font-size: 1em;
+
+        @include greater_than($lg) {
+          font-size: 1.9em;
+        }
+      }
+
+      .MuiSwitch-root {
+        @include greater_than($lg) {
+          align-self: center;
+          height: 58px;
+          width: 90px;
+          padding: 14px;
+        }
+      }
+
+      .MuiSwitch-track {
+        @include greater_than($lg) {
+          border-radius: 20px;
+        }
       }
 
       .switch {
-        margin: 0.5em 0.1em 0 0.1em;
+        margin: 0 0.1em;
+
+        @include greater_than($lg) {
+          margin: 0 1em;
+        }
+
+        .MuiSwitch-thumb {
+          @include greater_than($lg) {
+            width: 40px;
+            height: 40px;
+          }
+        }
 
         .MuiSwitch-colorSecondary.Mui-checked {
           color: white;
-          font-size: 200px;
         }
 
         .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
@@ -108,7 +142,7 @@
     }
 
     .philipsLight-heading-line {
-      width: 80px;
+      width: 120px;
       margin-right: 0;
       border: 0;
       height: 0;
