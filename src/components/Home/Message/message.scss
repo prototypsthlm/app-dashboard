@@ -131,10 +131,10 @@
           margin-bottom: 1em;
 
           .message-message-wrapper {
-            width: 300px;
+            width: 250px;
 
             @include greater_than($lg) {
-              width: 350px;
+              width: 300px;
             }
 
             .message-message-text {
@@ -147,23 +147,25 @@
             }
 
             .message-message-name {
-              font-weight: 200;
-              font-size: 1em;
+              font-family: $small-animation-font;
+              font-weight: 300;
+              font-size: 0.6em;
               margin-bottom: 0.5em;
+
               @include greater_than($lg) {
-                font-size: 1.1em;
+                font-size: 0.7em;
               }
             }
 
             .message-message-date {
               font-weight: 200;
-              font-family: $body_font;
+              font-family: $small-animation-font;
               color: #646464;
-              font-size: 0.7em;
+              font-size: 0.5em;
               margin-top: 0;
 
               @include greater_than($lg) {
-                font-size: 0.8em;
+                font-size: 0.6em;
               }
             }
           }
@@ -227,7 +229,7 @@
       font-size: 1em;
       color: #646464;
       font-weight: 100;
-      font-family: $body_font;
+      font-family: $small-animation-font;
       -webkit-transition-duration: 0.4s;
       -o-transition-duration: 0.4s;
       transition-duration: 0.4s;

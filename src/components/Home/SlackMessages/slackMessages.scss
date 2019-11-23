@@ -75,12 +75,13 @@
             }
 
             .slackmessages-post-user {
-              font-size: 1em;
+              font-size: 0.6em;
               margin-bottom: 0;
               font-weight: 300;
+              font-family: $small-animation-font;
 
               @include greater_than($lg) {
-                font-size: 1.1em;
+                font-size: 0.7em;
               }
             }
           }
