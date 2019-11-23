@@ -20,7 +20,7 @@ footer {
 
       a:link {
         color: white;
-        margin: 1em 0em 0em 1em;
+        margin: 2.6em 0em 0em 1em;
         text-decoration: none;
         -webkit-writing-mode: vertical-lr;
         -ms-writing-mode: tb-lr;
@@ -54,7 +54,7 @@ footer {
         cursor: pointer;
         z-index: 4;
         color: white;
-        margin: 1em 0em 0em 1em;
+        margin: 2.6em 0em 0em 1em;
         text-decoration: none;
         -webkit-writing-mode: vertical-lr;
         -ms-writing-mode: tb-lr;
@@ -81,9 +81,9 @@ footer {
 
       .navlink-footer-line {
         color: white;
-        height: 25px;
+        height: 35px;
         border-left: 0.7px solid white;
-        margin: 1em;
+        margin: 1.1em;
 
         @include greater_than($lg) {
           height: 50px;

@@ -28,15 +28,11 @@
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    height: 40%;
-    padding: 2em 1em 0 3em;
+    height: 70%;
+    padding: 2em 3em 0em 3em;
 
     @include greater_than($lg) {
-      height: 70%;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      padding: 6em 1em 5em 3em;
+      padding: 3em 3em 0em 3em;
     }
 
     .sonosdefault-top {
@@ -89,11 +85,14 @@
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      width: 100%;
+      width: 97%;
+
+      @include greater_than($lg) {
+        width: 98%;
+      }
 
       .sonos-volume {
         color: grey;
-        width: 80%;
 
         .MuiSlider-thumb.Mui-focusVisible,
         .MuiSlider-thumb:hover {
@@ -108,34 +107,37 @@
       }
 
       .volume-icon {
-        color: rgba(94, 149, 150, 0.8);
-        padding-left: 1em;
-        font-size: 1.3em;
+        color: grey;
+        padding-left: 1.9em;
+        font-size: 1.1em;
+
+        @include greater_than($lg) {
+          font-size: 1.5em;
+        }
       }
     }
-
     .sonosdefault-title {
       font-family: $small-animation-font;
-      text-align: end;
+      text-align: start;
       font-size: 0.8em;
       text-transform: lowercase;
 
       @include greater_than($lg) {
-        font-size: 1.4em;
+        font-size: 1.3em;
       }
     }
 
     .sonosdefault-room {
-      -ms-flex-item-align: end;
-      align-self: flex-end;
+      -ms-flex-item-align: start;
+      align-self: flex-start;
       margin: 1em 0 0 0;
       font-family: $headers-font;
       text-transform: lowercase;
-      font-size: 1em;
+      font-size: 0.6em;
       color: grey;
 
       @include greater_than($lg) {
-        font-size: 1.2em;
+        font-size: 1.1em;
       }
     }
   }

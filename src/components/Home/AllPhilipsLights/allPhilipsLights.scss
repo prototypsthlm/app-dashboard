@@ -41,12 +41,12 @@
       margin-bottom: 0.5em;
 
       .onoff-text {
-        font-family: $body-font;
+        font-family: $small-animation-font;
         margin-top: 1em;
-        font-size: 1em;
+        font-size: 0.8em;
 
         @include greater_than($lg) {
-          font-size: 1.9em;
+          font-size: 1.1em;
         }
       }
 
