@@ -1,7 +1,5 @@
 import React from 'react'
 import './home.scss'
-import Message from './Message/Message'
-import SlackMessages from './SlackMessages/SlackMessages'
 import AllPhilipsLights from './AllPhilipsLights/AllPhilipsLights'
 import SonosDefaultPlayer from './SonosDefaultPlayer/SonosDefaultPlayer'
 // @ts-ignore
@@ -27,10 +25,8 @@ export const Home = () => {
               wrapper="sonos-wrapper"
             />
           </div>
-          <Message />
         </div>
         <div className="home-slackmessage-wrapper">
-          <SlackMessages />
           <div className="home-bottom-animation">
             <p className="home-text-prototyp">prototyp</p>
           </div>
