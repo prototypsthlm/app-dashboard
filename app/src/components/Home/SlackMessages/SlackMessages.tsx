@@ -57,10 +57,13 @@ class SlackMessages extends React.Component<{}, IState> {
       )
       .then((result: any) => {
         this.setState({
-          messages: result.data.items,
+          //messages: result.data.items,
         })
       })
       .catch((error: any) => {
+        this.setState({
+          messages: [],
+        })
       })
   }
 
@@ -82,7 +85,9 @@ class SlackMessages extends React.Component<{}, IState> {
   pinnedSlackPost = () => {
     const { messages, users } = this.state
 
-    const list = messages.map(singleMessage => {
+    console.log("messages", messages)
+
+    return messages.map(singleMessage => {
       const slackMessage = singleMessage.message.text
       const slackMessageUserId = singleMessage.message.user
       const id = singleMessage.message.ts
@@ -91,12 +96,12 @@ class SlackMessages extends React.Component<{}, IState> {
 
       return { slackUsername, slackMessage, id }
     })
-
-    return list
   }
 
   public render() {
     const pinnedSlackMessages = this.pinnedSlackPost()
+
+    console.log("pinnedSlackPost", pinnedSlackMessages)
 
     return (
       <div className="slackmessage-container">
@@ -105,31 +110,31 @@ class SlackMessages extends React.Component<{}, IState> {
             <div className="slackmessage-card-container">
               <ul>
                 {pinnedSlackMessages &&
-                  pinnedSlackMessages.map(post => (
-                    <div key={post.id}>
-                      <li>
-                        <div className="slackmessages-post-wrapper">
-                          <Emoji
-                            className="slackmessages-post-text"
-                            text={post.slackMessage.replace(/[<>]/g, '')}
-                          />
-                          <p className="slackmessages-post-user">
-                            - {post.slackUsername}
-                          </p>
-                        </div>
-                      </li>
-                      <hr className="slackmessage-line" />
-                    </div>
-                  ))}
+                 pinnedSlackMessages.map(post => (
+                   <div key={post.id}>
+                     <li>
+                       <div className="slackmessages-post-wrapper">
+                         <Emoji
+                           className="slackmessages-post-text"
+                           text={post.slackMessage.replace(/[<>]/g, '')}
+                         />
+                         <p className="slackmessages-post-user">
+                           - {post.slackUsername}
+                         </p>
+                       </div>
+                     </li>
+                     <hr className="slackmessage-line" />
+                   </div>
+                ))}
               </ul>
             </div>
           ) : (
-              <div className="no-messages-card">
-                <p className="slackmessages-no-text">
-                  No pinned messages to show
+            <div className="no-messages-card">
+              <p className="slackmessages-no-text">
+                No pinned messages to show
               </p>
-              </div>
-            )}
+            </div>
+          )}
         </div>
 
         <div className="slackmessages-heading-container">
